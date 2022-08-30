@@ -1,7 +1,12 @@
+import { compareAsc } from "date-fns";
 import { Link } from "react-router-dom";
 import Match from "./Match";
 
 const Matches = ({ teamName, teamData }) => {
+  const matches = teamData.matches.sort((a, b) =>
+    compareAsc(new Date(b.date), new Date(a.date))
+  );
+
   return (
     <div className="margin-horizontal">
       <div className="flex">
@@ -10,7 +15,7 @@ const Matches = ({ teamName, teamData }) => {
           <h4>Go Back</h4>
         </Link>
       </div>
-      {teamData.matches.map((match, index) => {
+      {matches.map((match, index) => {
         return <Match match={match} key={index} />;
       })}
     </div>
