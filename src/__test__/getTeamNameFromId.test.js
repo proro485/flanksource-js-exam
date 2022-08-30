@@ -1,6 +1,6 @@
 import { getTeamNameFromId } from "../utils/helper";
 
-it("should return the team id", () => {
+it("should return the team name from team id", () => {
   // Single Word Team Id
   expect(getTeamNameFromId("arsenal")).toBe("Arsenal");
 
