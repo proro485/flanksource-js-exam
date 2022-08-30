@@ -1,4 +1,5 @@
 import useDataStore from "../stores/DataStore";
+import Row from "./Row";
 
 const Table = () => {
   const { data, teams } = useDataStore();
@@ -16,15 +17,7 @@ const Table = () => {
       </thead>
       <tbody>
         {teams.map((team, index) => {
-          return (
-            <tr key={index}>
-              <td>{team}</td>
-              <td>{data[team].won}</td>
-              <td>{data[team].lost}</td>
-              <td>{data[team].draw}</td>
-              <td>{data[team].points}</td>
-            </tr>
-          );
+          return <Row key={index} team={team} data={data} />;
         })}
       </tbody>
     </table>
