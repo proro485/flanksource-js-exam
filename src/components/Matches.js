@@ -6,7 +6,9 @@ const Matches = ({ teamName, teamData }) => {
     <div className="margin-horizontal">
       <div className="flex">
         <h1>{teamName}</h1>
-        <Link to="/">Go Back</Link>
+        <Link to="/">
+          <h4>Go Back</h4>
+        </Link>
       </div>
       {teamData.matches.map((match, index) => {
         return <Match match={match} key={index} />;

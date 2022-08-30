@@ -7,9 +7,9 @@ const Row = ({ team, data }) => {
 
   return (
     <tr>
-      <td>
+      <th>
         <Link to={`/teams/${getTeamId()}`}>{team}</Link>
-      </td>
+      </th>
       <td>{data[team].won}</td>
       <td>{data[team].lost}</td>
       <td>{data[team].draw}</td>
