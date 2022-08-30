@@ -21,6 +21,10 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/teams/:id" element={<Team />} />
+        <Route
+          path="*"
+          element={<div className="center">404 | Page Not Found</div>}
+        />
       </Routes>
     </BrowserRouter>
   );

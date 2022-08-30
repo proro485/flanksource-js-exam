@@ -5,12 +5,17 @@
 
 a {
   text-decoration: none;
+  color: blueviolet;
 }
 
 .flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.flex-start {
+  justify-content: flex-start;
 }
 
 .margin-horizontal {
@@ -35,4 +40,8 @@ th {
   border: 1px solid black;
   margin-bottom: 1.5rem;
   padding: 1rem;
+}
+
+.px-2 {
+  padding: 0 0.5rem;
 }
