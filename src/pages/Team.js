@@ -17,7 +17,11 @@ const Team = () => {
   const teamName = getTeamNameFromId();
 
   if (!data[teamName]) {
-    return <div>404 | Page Not Found</div>;
+    return (
+      <div className="center">
+        <h2>404 | Page Not Found</h2>
+      </div>
+    );
   }
 
   return <Matches teamName={teamName} teamData={data[teamName]} />;
