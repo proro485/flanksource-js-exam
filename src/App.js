@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Table from "./components/Table";
 import { data } from "./data";
 import useDataStore from "./stores/DataStore";
 import "./styles.css";
@@ -10,7 +11,11 @@ const App = () => {
     makeDataUsable(data);
   }, []);
 
-  return <div>App</div>;
+  return (
+    <div>
+      <Table />
+    </div>
+  );
 };
 
 export default App;
