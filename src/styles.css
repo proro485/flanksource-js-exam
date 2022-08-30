@@ -2,3 +2,37 @@
   font-family: sans-serif;
   text-align: center;
 }
+
+a {
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.margin-horizontal {
+  margin: 0 1.5rem;
+}
+
+table, th, td {
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 1rem 1.5rem;
+}
+
+th {
+  text-align: left;
+}
+
+.match {
+  border: 1px solid black;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+}

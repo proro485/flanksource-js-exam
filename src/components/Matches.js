@@ -7,8 +7,8 @@ const Matches = ({ teamName, teamData }) => {
   };
 
   return (
-    <>
-      <div>
+    <div className="margin-horizontal">
+      <div className="flex">
         <h1>{teamName}</h1>
         <Link to="/">Go Back</Link>
       </div>
@@ -17,11 +17,11 @@ const Matches = ({ teamName, teamData }) => {
         return (
           <div key={index}>
             <h2>{getFormatteDate(match.date)}</h2>
-            <h4>{`${keys[0]} vs ${keys[1]}`}</h4>
+            <h4 className="match">{`${keys[0]} vs ${keys[1]}`}</h4>
           </div>
         );
       })}
-    </>
+    </div>
   );
 };
 
