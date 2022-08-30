@@ -1,28 +1,28 @@
 import useDataStore from "../stores/DataStore";
 
 const Table = () => {
-  const { data } = useDataStore();
-
-  const keys = Object.keys(data);
+  const { data, teams } = useDataStore();
 
   return (
     <table>
       <thead>
-        <th>Name</th>
-        <th>Won</th>
-        <th>Lost</th>
-        <th>Draw</th>
-        <th>Points</th>
+        <tr>
+          <th>Name</th>
+          <th>Won</th>
+          <th>Lost</th>
+          <th>Draw</th>
+          <th>Points</th>
+        </tr>
       </thead>
       <tbody>
-        {keys.map((key, index) => {
+        {teams.map((team, index) => {
           return (
             <tr key={index}>
-              <td>{key}</td>
-              <td>{data[key].won}</td>
-              <td>{data[key].lost}</td>
-              <td>{data[key].draw}</td>
-              <td>{data[key].points}</td>
+              <td>{team}</td>
+              <td>{data[team].won}</td>
+              <td>{data[team].lost}</td>
+              <td>{data[team].draw}</td>
+              <td>{data[team].points}</td>
             </tr>
           );
         })}

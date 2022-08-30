@@ -2,6 +2,7 @@ import create from "zustand";
 
 const useDataStore = create((set) => ({
   data: [],
+  teams: [],
   makeDataUsable: (data) => {
     const usableData = {};
     for (let i = 0; i < data.length; i++) {
@@ -32,7 +33,11 @@ const useDataStore = create((set) => ({
         };
       }
     }
-    set({ data: usableData });
+
+    let keys = Object.keys(usableData);
+    keys = keys.sort((a, b) => usableData[b].points - usableData[a].points);
+
+    set({ data: usableData, teams: keys });
   },
 }));
 
