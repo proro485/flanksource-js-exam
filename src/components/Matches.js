@@ -1,6 +1,11 @@
+import { format } from "date-fns";
 import { Link } from "react-router-dom";
 
 const Matches = ({ teamName, teamData }) => {
+  const getFormatteDate = (date) => {
+    return format(new Date(date), "dd/MM, HH:mm");
+  };
+
   return (
     <>
       <div>
@@ -11,7 +16,7 @@ const Matches = ({ teamName, teamData }) => {
         const keys = Object.keys(match.score);
         return (
           <div key={index}>
-            <h2>{match.date}</h2>
+            <h2>{getFormatteDate(match.date)}</h2>
             <h4>{`${keys[0]} vs ${keys[1]}`}</h4>
           </div>
         );
