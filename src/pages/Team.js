@@ -1,20 +1,13 @@
 import { useParams } from "react-router-dom";
 import Matches from "../components/Matches";
 import useDataStore from "../stores/DataStore";
+import { getTeamNameFromId } from "../utils/helper";
 
 const Team = () => {
   const { id } = useParams();
   const { data } = useDataStore();
 
-  const getTeamNameFromId = () => {
-    let teamName = id.split("-");
-    for (let i = 0; i < teamName.length; i++) {
-      teamName[i] = teamName[i].charAt(0).toUpperCase() + teamName[i].slice(1);
-    }
-    return teamName.join(" ");
-  };
-
-  const teamName = getTeamNameFromId();
+  const teamName = getTeamNameFromId(id);
 
   if (!data[teamName]) {
     return (

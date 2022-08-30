@@ -1,14 +1,11 @@
 import { Link } from "react-router-dom";
+import { getTeamId } from "../utils/helper";
 
 const Row = ({ team, data }) => {
-  const getTeamId = () => {
-    return team.toLowerCase().split(" ").join("-");
-  };
-
   return (
     <tr>
       <th>
-        <Link to={`/teams/${getTeamId()}`}>{team}</Link>
+        <Link to={`/teams/${getTeamId(team)}`}>{team}</Link>
       </th>
       <td>{data[team].won}</td>
       <td>{data[team].lost}</td>

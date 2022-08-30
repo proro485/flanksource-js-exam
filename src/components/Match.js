@@ -1,16 +1,8 @@
-import { format } from "date-fns";
 import { Link } from "react-router-dom";
+import { getFormattedDate, getTeamId } from "../utils/helper";
 
 const Match = ({ match }) => {
   const keys = Object.keys(match.score);
-
-  const getTeamId = (team) => {
-    return team.toLowerCase().split(" ").join("-");
-  };
-
-  const getFormattedDate = (date) => {
-    return format(new Date(date), "dd/MM, HH:mm");
-  };
 
   return (
     <>
