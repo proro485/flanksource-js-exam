@@ -12,7 +12,9 @@ const Table = () => {
           <th>Won</th>
           <th>Lost</th>
           <th>Draw</th>
+          <th>GD</th>
           <th>Points</th>
+          <th>Played</th>
         </tr>
       </thead>
       <tbody>
